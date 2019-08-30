@@ -13,18 +13,32 @@
   2、带有参数的html地址，一般都是最新的内容，如https://www.xuexi.cn/lgpage/detail/index.html?id=10981378426592497568，这个分析http的请求可以知道需要将后面的id参数（其实是md5加密后的）拼接一个地址，即https://boot-source.xuexi.cn/data/app/10981378426592497568.js，即可获取内容，也需要经过处理才是json。具题请看代码处理。
   
  四、mysql表结构
+ 
  CREATE TABLE QGNews(
+ 
 article_index INT NOT NULL AUTO_INCREMENT,
+
 article_id CHAR(100),
+
 article_title CHAR(100),
+
 article_url CHAR(100),
+
 article_date CHAR(50),
+
 article_editor CHAR(50),
+
 article_content longtext,
+
 article_source CHAR(50),
+
 column_id CHAR(100),
+
 PRIMARY KEY(article_index))DEFAULT CHARSET=utf8;
 
+
 五、有问题请联系：
+
   qq：541095024
+  
   微信：lqq_1228
